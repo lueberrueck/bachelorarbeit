@@ -40,12 +40,11 @@ async function applyJsonataExpression(json, expression) {
 // Hauptfunktion
 async function harmonizeXmlToJson(xmlFilePath, jsonataExpression) {
   try {
-    // TODO XML Schema validieren um dann passendes Regelwerk anzuwenden
     
     // XML in JSON umwandeln
     const jsonFromXml = await readXmlFile(xmlFilePath);
   
-    // JSONata-Expression anwenden
+    // JSONata-Expression anwenden, ROOT MUSS HIER AUF MASCHINE ANGEPASST WERDEN
     const harmonizedJson = await applyJsonataExpression(jsonFromXml.MachineFeedback, jsonataExpression);
     
     // Ergebnis ausgeben
