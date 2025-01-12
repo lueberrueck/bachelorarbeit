@@ -1,0 +1,49 @@
+{
+  "eventType": "MaschinenUpdate",
+  "hubName": "ZentralerDatenHub",
+  "deviceId": MachineCode ? $string(MachineCode) : "BAZ_2263",
+  "data": {
+    "batchLabel": BatchLabel ? $string(BatchLabel) : null,
+    "sequenceID": SequenceID ? $string(SequenceID) : null,
+    "profileType": ProfileType ? $string(ProfileType) : null,
+    "partIndex": PartIndex ? $number(PartIndex) : null,
+    "partDescription": PartDescription ? $string(PartDescription) : null,
+    "componentPosition": ComponentPosition ? $string(ComponentPosition) : null,
+    "partLength": PartLength ? $number(PartLength) : null,
+    "uniqueIdentifier": UniqueIdentifier ? $string(UniqueIdentifier) : null,
+    "completionDate": CompletionDate ? (
+      $fromMillis(
+        $toMillis(
+          $replace(CompletionDate, /(\d+)\.\s(\w+)\s(\d{4})\s(\d{2}):(\d{2})/, "$3-$2-$1T$4:$5:00Z"),
+          "[Y]-[MNn]-[D]T[H]:[m]:[s]Z"
+        )
+      )
+    ) : null,
+    "processDuration": ProcessDuration ? $number(ProcessDuration) : null,
+    "errors": Errors ? (
+      $map(Errors.Error, function($error) {
+        {
+          "code": $error.Code ? $string($error.Code) : null,
+          "message": $error.Message ? $string($error.Message) : null,
+          "timestamp": $error.Timestamp ? (
+            $fromMillis(
+              $toMillis(
+                $replace($error.Timestamp, /(\d+)\.\s(\w+)\s(\d{4})\s(\d{2}):(\d{2})/, "$3-$2-$1T$4:$5:00Z"),
+                "[Y]-[MNn]-[D]T[H]:[m]:[s]Z"
+              )
+            )
+          ) : null
+        }
+      })
+    ) : [],
+    "status": Errors ? (
+      $count(Errors.Error) > 0 ? "error" : "on"
+    ) : "on",
+    "averageStepTime": ProcessDuration ? $number(ProcessDuration) / ($count(Errors.Error) > 0 ? $count(Errors.Error) : 1) : null,
+    "totalErrors": Errors ? $count(Errors.Error) : 0,
+    "totalMaterialUsage": MaterialUsage ? $reduce(MaterialUsage.Process, function($sum, $value) { $sum + $number($value) }, 0) : null,
+    "actualCycleDuration": ProcessDuration ? $number(ProcessDuration) : null
+  }
+}
+Struktur 2
+Datum wurde nicht richig konvertiert

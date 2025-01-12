@@ -1,0 +1,46 @@
+<ProcessData machineId="BAZ_6964">
+    <Lot>klm-ZTL9278-661825</Lot>
+    <ns:BarID>7587-7923</ns:BarID>
+    <MaterialProfile>Profile-7353</MaterialProfile>
+    <PartNumber>5</PartNumber>
+    <ItemName>klm-BTL9905</ItemName>
+    <Location>klm-2418,32, links</Location>
+    <LengthOfPart>791.6</LengthOfPart>
+    <Identification>48155</Identification>
+    <FinishDate>2025-01-22 12:53</FinishDate>
+    <ProcessingTime>
+        <CycleTime>
+            <Setup>4</Setup>
+            <Machining>19</Machining>
+            <Cleanup>6</Cleanup>
+        </CycleTime>
+        <Total>29</Total>
+    </ProcessingTime>
+    <Errors>
+<Error>
+            <Code>E202</Code>
+            <Message>Tool wear detected</Message>
+            <Timestamp>2024-10-14 08:40</Timestamp>
+        </Error>
+</Errors>
+    <Operator>John Doe</Operator>
+    <StepTimes>
+        <Step>13</Step>
+        <Step>19</Step>
+        <Step>17</Step>
+    </StepTimes>
+    <ErrorCounts>
+        <MinorErrors>0</MinorErrors>
+        <MajorErrors>2</MajorErrors>
+        <CriticalErrors>2</CriticalErrors>
+    </ErrorCounts>
+    <MaterialUsage>
+        <Process>10.6</Process>
+        <Process>13.3</Process>
+        <Process>11.7</Process>
+    </MaterialUsage>
+    <CycleTimes>
+        <Start>2024-12-04 11:53</Start>
+        <End>2024-12-04 12:53</End>
+    </CycleTimes>
+</ProcessData>

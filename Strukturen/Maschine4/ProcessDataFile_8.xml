@@ -1,0 +1,44 @@
+<ProcessData machineId="BAZ_8766">
+    <Lot>klm-RTL7110-727139</Lot>
+    <ns:BarID>1089-5188</ns:BarID>
+    <MaterialProfile>Profile-8278</MaterialProfile>
+    <PartNumber>3</PartNumber>
+    <ItemName>klm-RTL6476</ItemName>
+    <Location>klm-7623,24, unten</Location>
+    <LengthOfPart>544.7</LengthOfPart>
+    <Identification>51785</Identification>
+    <FinishDate>2025-02-24 12:53</FinishDate>
+    <ProcessingTime>
+        <CycleTime>
+            <Setup>10</Setup>
+            <Machining>12</Machining>
+            <Cleanup>4</Cleanup>
+        </CycleTime>
+        <Total>46</Total>
+    </ProcessingTime>
+    <Errors><Error>
+            <Code>E101</Code>
+            <Message>Material thickness exceeded limit</Message>
+            <Timestamp>2024-10-14 08:30</Timestamp>
+        </Error></Errors>
+    <Operator>John Doe</Operator>
+    <StepTimes>
+        <Step>16</Step>
+        <Step>13</Step>
+        <Step>23</Step>
+    </StepTimes>
+    <ErrorCounts>
+        <MinorErrors>3</MinorErrors>
+        <MajorErrors>1</MajorErrors>
+        <CriticalErrors>1</CriticalErrors>
+    </ErrorCounts>
+    <MaterialUsage>
+        <Process>12.3</Process>
+        <Process>14.9</Process>
+        <Process>11.2</Process>
+    </MaterialUsage>
+    <CycleTimes>
+        <Start>2024-12-04 11:53</Start>
+        <End>2024-12-04 12:53</End>
+    </CycleTimes>
+</ProcessData>

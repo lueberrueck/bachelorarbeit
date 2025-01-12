@@ -1,0 +1,17 @@
+<MachineFeedback>
+    <MachineCode>BAZ_1234</MachineCode>
+    <BatchLabel>xyz-MTG1234-123456</BatchLabel>
+    <SequenceID>3456-6543</SequenceID>
+    <ProfileType>Type-1234</ProfileType>
+    <PartIndex>3</PartIndex>
+    <PartDescription>xyz-MTG1234</PartDescription>
+    <ComponentPosition>xyz-5678,15, unten</ComponentPosition>
+    <PartLength>1024.5</PartLength>
+    <UniqueIdentifier>04567</UniqueIdentifier>
+    <CompletionDate>12.10.2024 10:30</CompletionDate>
+    <MaterialUsage>
+        <Process>10.5</Process>
+        <Process>12.8</Process>
+    </MaterialUsage>
+    <ProcessDuration>25</ProcessDuration>
+</MachineFeedback>

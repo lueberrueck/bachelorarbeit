@@ -1,0 +1,15 @@
+<MachineFeedback>
+    <MachineCode>BAZ_2222</MachineCode>
+    <BatchLabel>pqr-STU5678-123456</BatchLabel>
+    <SequenceID>8901-2345</SequenceID>
+    <ProfileType>Type-8765</ProfileType>
+    <PartIndex>7</PartIndex>
+    <PartDescription>pqr-STU5678</PartDescription>
+    <PartLength>1332.4</PartLength>
+    <CompletionDate>17.10.2024 09:50</CompletionDate>
+    <MaterialUsage>
+        <Process>15.0</Process>
+        <Process>6.5</Process>
+    </MaterialUsage>
+    <ProcessDuration>19</ProcessDuration>
+</MachineFeedback>

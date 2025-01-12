@@ -1,0 +1,16 @@
+<MachineFeedback>
+    <MachineCode>BAZ_9876</MachineCode>
+    <BatchLabel>def-KTG5678-567890</BatchLabel>
+    <SequenceID>5678-8901</SequenceID>
+    <ProfileType>Type-4321</ProfileType>
+    <PartIndex>8</PartIndex>
+    <PartDescription>def-KTG5678</PartDescription>
+    <ComponentPosition>def-2345,45, oben</ComponentPosition>
+    <PartLength>950.2</PartLength>
+    <UniqueIdentifier>06789</UniqueIdentifier>
+    <CompletionDate>13.10.2024 16:45</CompletionDate>
+    <MaterialUsage>
+        <Process>14</Process>
+    </MaterialUsage>
+    <ProcessDuration>18</ProcessDuration>
+</MachineFeedback>

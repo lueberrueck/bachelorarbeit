@@ -1,0 +1,35 @@
+<CombinedMachineData>
+    <MachineInfo MachineCode="BAZ_5678">
+        <Batch>xyz-TRQ5678-654321</Batch>
+        <Sequence>6789-1234</Sequence>
+        <Profile>Type-5678</Profile>
+    </MachineInfo>
+    <PartDetails>
+        <PartIndex>3</PartIndex>
+        <PartDescription>abc-XPT3456</PartDescription>
+        <Location>abc-4589,20, rechts</Location>
+        <PartLength>845.7</PartLength>
+    </PartDetails>
+    <Completion>
+        <Date>12. September 2024</Date>
+        <Time>14:45</Time>
+    </Completion>
+    <ProcessDetails>
+        <ProcessDuration>42</ProcessDuration>
+        <MaterialUsage>
+            <Process>14.1</Process>
+            <Process>20.3</Process>
+            <Process>28.9</Process>
+        </MaterialUsage>
+    </ProcessDetails>
+    <Operator>John Doe</Operator>
+    <Errors>
+        <Critical>
+            <Error>
+            <Code>E303</Code>
+            <Message>Temperature too high</Message>
+            <Timestamp>2024-10-14 08:50</Timestamp>
+        </Error>
+        </Critical>
+    </Errors>
+</CombinedMachineData>

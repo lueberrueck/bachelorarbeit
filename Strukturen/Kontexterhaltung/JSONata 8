@@ -1,0 +1,64 @@
+{
+  "eventType": "MaschinenUpdate",
+  "hubName": "ZentralerDatenHub",
+  "deviceId": $exists(attr.machineId) ? attr.machineId : "BAZ_2263",
+  "data": {
+    "batchLabel": Lot ? $string(Lot) : null,
+    "sequenceID": BarID ? $string(BarID) : null,
+    "profileType": MaterialProfile ? $string(MaterialProfile) : null,
+    "partIndex": PartNumber ? $number(PartNumber) : null,
+    "partDescription": ItemName ? $string(ItemName) : null,
+    "componentPosition": Location ? $string(Location) : null,
+    "partLength": LengthOfPart ? $number(LengthOfPart) : null,
+    "uniqueIdentifier": Identification ? $string(Identification) : null,
+    "completionDate": FinishDate ? (
+      $fromMillis(
+        $toMillis(FinishDate, "[Y0001]-[M01]-[D01] [H01]:[m01]"),
+        "[Y0001]-[M01]-[D01]T[H01]:[m01]:00Z"
+      )
+    ) : null,
+    "processDuration": ProcessingTime.Total ? $number(ProcessingTime.Total) : null,
+    "errors": Errors.Error ? (
+      $map(Errors.Error, function($error) {
+        {
+          "code": $error.Code ? $string($error.Code) : null,
+          "message": $error.Message ? $string($error.Message) : null,
+          "timestamp": $error.Timestamp ? (
+            $fromMillis(
+              $toMillis($error.Timestamp, "[Y0001]-[M01]-[D01] [H01]:[m01]"),
+              "[Y0001]-[M01]-[D01]T[H01]:[m01]:00Z"
+            )
+          ) : null
+        }
+      })
+    ) : [],
+    "status": (
+      $exists(Errors.Error[Code = "E101" or Code = "E303"]) or
+      $exists(Errors.Error[Message ~> /Temperature too high/])
+    ) ? "error" : (
+      $exists(Errors.Error[Code = "E202"]) or
+      $exists(Errors.Error[Message ~> /Tool wear detected/])
+    ) ? "warning" : "on",
+    "averageStepTime": StepTimes.Step ? (
+      $average($map(StepTimes.Step, $number))
+    ) : null,
+    "totalErrors": ErrorCounts ? (
+      $sum([
+        $number(ErrorCounts.MinorErrors),
+        $number(ErrorCounts.MajorErrors),
+        $number(ErrorCounts.CriticalErrors)
+      ])
+    ) : 0,
+    "totalMaterialUsage": MaterialUsage.Process ? (
+      $sum($map(MaterialUsage.Process, $number))
+    ) : null,
+    "actualCycleDuration": (
+      $exists(CycleTimes.Start) and $exists(CycleTimes.End)
+    ) ? (
+      ($toMillis(CycleTimes.End, "[Y0001]-[M01]-[D01] [H01]:[m01]") -
+      $toMillis(CycleTimes.Start, "[Y0001]-[M01]-[D01] [H01]:[m01]")) / 60000
+    ) : null
+  }
+}
+Strukur 4:
+Korrekter Ausdruck

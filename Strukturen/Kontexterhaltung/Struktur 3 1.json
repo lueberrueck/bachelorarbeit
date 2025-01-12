@@ -1,0 +1,23 @@
+{
+    "eventType": "MaschinenUpdate",
+    "hubName": "ZentralerDatenHub",
+    "deviceId": "BAZ_8719",
+    "data": {
+      "batchLabel": "efg-MNL5279-896639",
+      "sequenceID": "2404-2319",
+      "profileType": "6290",
+      "partIndex": 1,
+      "partDescription": "efg-QTL4571",
+      "componentPosition": "efg-9215,17, oben",
+      "partLength": 511.15,
+      "uniqueIdentifier": "84358",
+      "completionDate": "2025-10-12T12:44:00Z",
+      "processDuration": 39,
+      "errors": [],
+      "status": "on",
+      "averageStepTime": 39,
+      "totalErrors": 0,
+      "totalMaterialUsage": null,
+      "actualCycleDuration": 39
+    }
+  }

@@ -1,0 +1,35 @@
+<CombinedMachineData>
+    <MachineInfo MachineCode="BAZ_1122">
+        <Batch>xyz-GKL1122-654789</Batch>
+        <Sequence>1234-5678</Sequence>
+        <Profile>Type-1122</Profile>
+    </MachineInfo>
+    <PartDetails>
+        <PartIndex>4</PartIndex>
+        <PartDescription>ghi-YTR1234</PartDescription>
+        <Location>ghi-9123,15, unten</Location>
+        <PartLength>981.4</PartLength>
+    </PartDetails>
+    <Completion>
+        <Date>22. September 2024</Date>
+        <Time>13:20</Time>
+    </Completion>
+    <ProcessDetails>
+        <ProcessDuration>45</ProcessDuration>
+        <MaterialUsage>
+            <Process>15.7</Process>
+            <Process>18.4</Process>
+            <Process>24.6</Process>
+        </MaterialUsage>
+    </ProcessDetails>
+    <Operator>Sarah Connor</Operator>
+    <Errors>
+        <Critical>
+            <Error>
+            <Code>E202</Code>
+            <Message>Tool wear detected</Message>
+            <Timestamp>2024-10-14 08:40</Timestamp>
+        </Error>
+        </Critical>
+    </Errors>
+</CombinedMachineData>

@@ -1,0 +1,22 @@
+{
+  "eventType": "MaschinenUpdate",
+  "hubName": "ZentralerDatenHub",
+  "deviceId": "BAZ_9876",
+  "data": {
+    "batchLabel": "def-KTG5678-567890",
+    "sequenceID": "5678-8901",
+    "profileType": "Type-4321",
+    "partIndex": 8,
+    "partDescription": "def-KTG5678",
+    "componentPosition": "def-2345,45, oben",
+    "partLength": 950.2,
+    "uniqueIdentifier": "06789",
+    "processDuration": 18,
+    "errors": [],
+    "status": "on",
+    "averageStepTime": null,
+    "totalErrors": 0,
+    "totalMaterialUsage": 14,
+    "actualCycleDuration": 18
+  }
+}

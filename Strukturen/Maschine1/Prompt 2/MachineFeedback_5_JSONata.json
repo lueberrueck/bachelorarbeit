@@ -1,0 +1,22 @@
+{
+    "eventType": "MaschinenUpdate",
+    "hubName": "ZentralerDatenHub",
+    "deviceId": "BAZ_1111",
+    "data": {
+      "batchLabel": "mno-PQR1234-345678",
+      "sequenceID": "6789-0123",
+      "profileType": "Type-5678",
+      "partIndex": 1,
+      "partDescription": "mno-PQR1234",
+      "componentPosition": "mno-1234,12, unten",
+      "partLength": 785,
+      "uniqueIdentifier": "null",
+      "processDuration": 20,
+      "errors": [],
+      "status": "on",
+      "averageStepTime": 20,
+      "totalErrors": 0,
+      "totalMaterialUsage": 7.2,
+      "actualCycleDuration": 20
+    }
+  }

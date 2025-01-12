@@ -1,0 +1,23 @@
+{
+  "eventType": "MaschinenUpdate",
+  "hubName": "ZentralerDatenHub",
+  "deviceId": "BAZ_6327",
+  "data": {
+    "batchLabel": "efg-QTL5392-129627",
+    "sequenceID": "4854-5512",
+    "profileType": "2497",
+    "partIndex": 19,
+    "partDescription": "efg-ZXL2698",
+    "componentPosition": "efg-4576,44, links",
+    "partLength": 576.51,
+    "uniqueIdentifier": "33808",
+    "completionDate": "2025-11-20T12:44:00.000Z",
+    "processDuration": 24,
+    "errors": [],
+    "status": "on",
+    "averageStepTime": null,
+    "totalErrors": 0,
+    "totalMaterialUsage": null,
+    "actualCycleDuration": 24
+  }
+}

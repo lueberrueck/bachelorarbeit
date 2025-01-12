@@ -1,0 +1,26 @@
+{
+  "eventType": "MaschinenUpdate",
+  "hubName": "ZentralerDatenHub",
+  "deviceId": MachineID ? MachineID : "BAZ_2263",
+  "data": {
+    "batchLabel": BatchName,
+    "sequenceID": SequenceNo,
+    "profileType": ProfileID,
+    "partIndex": $number(PartNo),
+    "partDescription": Description,
+    "componentPosition": PositionDetails,
+    "partLength": $number(PartLength),
+    "uniqueIdentifier": UniqueID,
+    "completionDate": $fromMillis(
+      $toMillis(CompletionTime, "[Y0001]/[M01]/[D01] [H01]:[m01] Uhr"),
+      "[Y0001]-[M01]-[D01]T[H01]:[m01]:00Z"
+    ),
+    "processDuration": $number(CycleDuration),
+    "errors": [],
+    "status": "on",
+    "averageStepTime": null,
+    "totalErrors": 0,
+    "totalMaterialUsage": null,
+    "actualCycleDuration": $number(CycleDuration)
+  }
+}

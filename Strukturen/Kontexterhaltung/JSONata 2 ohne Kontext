@@ -1,0 +1,59 @@
+{
+  "eventType": "MaschinenUpdate",
+  "hubName": "ZentralerDatenHub",
+  "deviceId": "BAZ_62325",
+  "data": {
+    "batchLabel": MachineInfo.Batch ? MachineInfo.Batch : null,
+    "sequenceID": MachineInfo.Sequence ? MachineInfo.Sequence : null,
+    "profileType": MachineInfo.Profile ? MachineInfo.Profile : null,
+    "partIndex": PartDetails.PartIndex ? $number(PartDetails.PartIndex) : null,
+    "partDescription": PartDetails.PartDescription ? PartDetails.PartDescription : null,
+    "componentPosition": PartDetails.Location ? PartDetails.Location : null,
+    "partLength": PartDetails.PartLength ? $number(PartDetails.PartLength) : null,
+    "uniqueIdentifier": null,
+    "completionDate": Completion.Date and Completion.Time ? (
+      $fromMillis(
+        $toMillis(Completion.Date & " " & Completion.Time, "[D1o]. [MNn] [Y0001] [H01]:[m01]"),
+        "[Y0001]-[M01]-[D01]T[H01]:[m01]:00Z"
+      )
+    ) : null,
+    "processDuration": ProcessDetails.ProcessDuration ? $number(ProcessDetails.ProcessDuration) : null,
+    "errors": $exists(Errors.Critical.Error) ? (
+      $map(
+        $append([], Errors.Critical.Error),
+        function($error) {
+          {
+            "code": $error.Code ? $error.Code : null,
+            "message": $error.Message ? $error.Message : null,
+            "timestamp": $error.Timestamp ? (
+              $fromMillis(
+                $toMillis($error.Timestamp, "[Y0001]-[M01]-[D01] [H01]:[m01]"),
+                "[Y0001]-[M01]-[D01]T[H01]:[m01]:00Z"
+              )
+            ) : null
+          }
+        }
+      )
+    ) : [],
+    "status": (
+      $contains($join($map(Errors.Critical.Error.Code, function($c) { $c }), ","), "E101") or
+      $contains($join($map(Errors.Critical.Error.Code, function($c) { $c }), ","), "E303") or
+      $contains($join($map(Errors.Critical.Error.Message, function($m) { $m }), ","), "Temperature too high")
+    ) ? "error" : (
+      $contains($join($map(Errors.Critical.Error.Code, function($c) { $c }), ","), "E202") or
+      $contains($join($map(Errors.Critical.Error.Message, function($m) { $m }), ","), "Tool wear detected")
+    ) ? "warning" : "on",
+    "averageStepTime": null,
+    "totalErrors": (
+      $sum([
+        Errors.MinorErrors ? $number(Errors.MinorErrors) : 0,
+        Errors.MajorErrors ? $number(Errors.MajorErrors) : 0,
+        Errors.CriticalErrors ? $number(Errors.CriticalErrors) : 0
+      ])
+    ),
+    "totalMaterialUsage": ProcessDetails.MaterialUsage.Process ? (
+      $sum($map(ProcessDetails.MaterialUsage.Process, function($mu) { $number($mu) }))
+    ) : 0,
+    "actualCycleDuration": null
+  }
+}

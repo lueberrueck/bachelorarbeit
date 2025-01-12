@@ -1,0 +1,29 @@
+{
+    "eventType": "MaschinenUpdate",
+    "hubName": "ZentralerDatenHub",
+    "deviceId": "BAZ_62325",
+    "data": {
+      "batchLabel": "klm-ZTL3350-230929",
+      "sequenceID": "1538-1969",
+      "profileType": "Profile-2118",
+      "partIndex": 5,
+      "partDescription": "klm-MTL9973",
+      "componentPosition": "klm-5314,34, oben",
+      "partLength": 1089,
+      "uniqueIdentifier": "39474",
+      "completionDate": "2025-07-05T12:53:00Z",
+      "processDuration": 17,
+      "errors": [
+        {
+          "Code": "E303",
+          "Message": "Temperature too high",
+          "Timestamp": "2024-10-14 08:50"
+        }
+      ],
+      "status": "error",
+      "averageStepTime": 18.333333333333332,
+      "totalErrors": 6,
+      "totalMaterialUsage": 27.1,
+      "actualCycleDuration": 120
+    }
+  }

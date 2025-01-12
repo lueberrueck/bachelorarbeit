@@ -1,0 +1,16 @@
+<!-- Ohne ProfileType -->
+<MachineFeedback>
+    <MachineCode>BAZ_3333</MachineCode>
+    <BatchLabel>stu-VWX2345-567890</BatchLabel>
+    <SequenceID>2345-6789</SequenceID>
+    <PartIndex>4</PartIndex>
+    <ComponentPosition>stu-5678,25, rechts</ComponentPosition>
+    <PartLength>null</PartLength>
+    <CompletionDate>18.10.2024 15:15</CompletionDate>
+    <MaterialUsage>
+        <Process>12.3</Process>
+        <Process>9.1</Process>
+        <Process>8.7</Process>
+    </MaterialUsage>
+    <ProcessDuration>17</ProcessDuration>
+</MachineFeedback>

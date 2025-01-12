@@ -1,0 +1,26 @@
+{
+    "eventType": "MaschinenUpdate",
+    "hubName": "ZentralerDatenHub",
+    "deviceId": "BAZ_62325",
+    "data": {
+      "batchLabel": "xyz-TRQ5678-654321",
+      "sequenceID": "6789-1234",
+      "profileType": "Type-5678",
+      "partIndex": 3,
+      "partDescription": "abc-XPT3456",
+      "componentPosition": "abc-4589,20, rechts",
+      "partLength": 845.7,
+      "uniqueIdentifier": null,
+      "processDuration": 42,
+      "errors": {
+        "code": "E303",
+        "message": "Temperature too high",
+        "timestamp": "2024-10-14T08:50:00Z"
+      },
+      "status": "error",
+      "averageStepTime": null,
+      "totalErrors": 0,
+      "totalMaterialUsage": 63.3,
+      "actualCycleDuration": null
+    }
+  }

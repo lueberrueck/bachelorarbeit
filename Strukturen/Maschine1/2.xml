@@ -1,0 +1,16 @@
+<MachineFeedback>
+    <MachineCode>BAZ_48400</MachineCode>
+    <BatchLabel>abc-BTX_10229</BatchLabel>
+    <SequenceID>4371_54513</SequenceID>
+    <ProfileType>Type_81230</ProfileType>
+    <PartIndex>4</PartIndex>
+    <PartDescription>abc-TX0815</PartDescription>
+    <ComponentPosition>abc-1234,26, oben</ComponentPosition>
+    <PartLength>792.91</PartLength>
+    <UniqueIdentifier>023_17911</UniqueIdentifier>
+    <CompletionDate>06.11.2024 23:00</CompletionDate>
+    <MaterialUsage>
+        <Process>23.5</Process>
+    </MaterialUsage>
+    <ProcessDuration>26</ProcessDuration>
+</MachineFeedback>

@@ -1,0 +1,59 @@
+<ProcessData machineId="BAZ_1952">
+    <Lot>klm-BTL7551-444659</Lot>
+    <ns:BarID>4924-4618</ns:BarID>
+    <MaterialProfile>Profile-8528</MaterialProfile>
+    <PartNumber>13</PartNumber>
+    <ItemName>klm-RTL5965</ItemName>
+    <Location>klm-3334,49, rechts</Location>
+    <LengthOfPart>1441.0</LengthOfPart>
+    <Identification>29283</Identification>
+    <FinishDate>2025-02-23 12:53</FinishDate>
+    <ProcessingTime>
+        <CycleTime>
+            <Setup>8</Setup>
+            <Machining>20</Machining>
+            <Cleanup>8</Cleanup>
+        </CycleTime>
+        <Total>30</Total>
+    </ProcessingTime>
+    <Errors><Error>
+            <Code>E101</Code>
+            <Message>Material thickness exceeded limit</Message>
+            <Timestamp>2024-10-14 08:30</Timestamp>
+        </Error>
+<Error>
+            <Code>E202</Code>
+            <Message>Tool wear detected</Message>
+            <Timestamp>2024-10-14 08:40</Timestamp>
+        </Error>
+<Error>
+            <Code>E303</Code>
+            <Message>Temperature too high</Message>
+            <Timestamp>2024-10-14 08:50</Timestamp>
+        </Error>
+<Error>
+            <Code>E404</Code>
+            <Message>Low oil pressure</Message>
+            <Timestamp>2024-10-14 09:00</Timestamp>
+        </Error></Errors>
+    <Operator>John Doe</Operator>
+    <StepTimes>
+        <Step>19</Step>
+        <Step>20</Step>
+        <Step>29</Step>
+    </StepTimes>
+    <ErrorCounts>
+        <MinorErrors>2</MinorErrors>
+        <MajorErrors>2</MajorErrors>
+        <CriticalErrors>1</CriticalErrors>
+    </ErrorCounts>
+    <MaterialUsage>
+        <Process>14.0</Process>
+        <Process>19.2</Process>
+        <Process>5.8</Process>
+    </MaterialUsage>
+    <CycleTimes>
+        <Start>2024-12-04 11:53</Start>
+        <End>2024-12-04 12:53</End>
+    </CycleTimes>
+</ProcessData>

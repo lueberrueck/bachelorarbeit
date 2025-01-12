@@ -1,0 +1,22 @@
+{
+    "eventType": "MaschinenUpdate",
+    "hubName": "ZentralerDatenHub",
+    "deviceId": "BAZ_6743",
+    "data": {
+      "batchLabel": "xyz-XYZ8721-546652",
+      "sequenceID": "1736-5727",
+      "profileType": "ID-8793",
+      "partIndex": 11,
+      "partDescription": "xyz-ABX8562",
+      "componentPosition": "xyz-9627,20, links",
+      "partLength": 1271.8,
+      "uniqueIdentifier": "91691",
+      "processDuration": 13,
+      "errors": [],
+      "status": "on",
+      "averageStepTime": null,
+      "totalErrors": 0,
+      "totalMaterialUsage": null,
+      "actualCycleDuration": 13
+    }
+  }

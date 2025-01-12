@@ -1,0 +1,33 @@
+<CombinedMachineData>
+    <MachineInfo MachineCode="BAZ_1234">
+        <Batch>xyz-MTG1234-123456</Batch>
+        <Sequence>3456-6543</Sequence>
+        <Profile>Type-1234</Profile>
+    </MachineInfo>
+    <PartDetails>
+        <PartIndex>5</PartIndex> 
+        <PartDescription>klm-BTL9905</PartDescription>
+        <Location>klm-2418,32, links</Location> 
+        <PartLength>1024.5</PartLength> 
+    </PartDetails>
+    <Completion>
+        <Date>31. Juni 2024</Date>
+        <Time>15:23</Time>
+    </Completion>
+    <ProcessDetails>
+        <ProcessDuration>39</ProcessDuration>
+        <MaterialUsage>
+            <Process>13.3</Process>
+            <Process>25.8</Process>
+            <Process>30.4</Process>
+        </MaterialUsage>
+    </ProcessDetails>
+    <Operator>Chris White</Operator> 
+    <Errors>
+        <Critical>
+            <Code>E202</Code>
+            <Message>Tool wear detected</Message>
+            <Timestamp>2024-10-14 08:40</Timestamp>
+        </Critical>
+    </Errors>
+</CombinedMachineData>

@@ -1,0 +1,22 @@
+{
+    "eventType": "MaschinenUpdate",
+    "hubName": "ZentralerDatenHub",
+    "deviceId": "BAZ_6590",
+    "data": {
+      "batchLabel": "xyz-TLX2194-814341",
+      "sequenceID": "8773-7671",
+      "profileType": "ID-7639",
+      "partIndex": null,
+      "partDescription": "xyz-ABX5585",
+      "componentPosition": "xyz-3029,40, unten",
+      "partLength": 550.1,
+      "uniqueIdentifier": "36742",
+      "processDuration": 11,
+      "errors": [],
+      "status": "on",
+      "averageStepTime": null,
+      "totalErrors": null,
+      "totalMaterialUsage": null,
+      "actualCycleDuration": 11
+    }
+  }

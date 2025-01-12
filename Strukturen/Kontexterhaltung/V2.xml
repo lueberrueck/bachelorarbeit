@@ -1,0 +1,45 @@
+<CombinedMachineData>
+    <MachineInfo MachineCode="BAZ_9101">
+        <Batch>xyz-PQL9101-876543</Batch>
+        <Sequence>7890-4321</Sequence>
+        <Profile>Type-9101</Profile>
+    </MachineInfo>
+    <PartDetails>
+        <PartIndex>2</PartIndex>
+        <PartDescription>def-WPQ7890</PartDescription>
+        <Location>def-7890,40, oben</Location>
+        <PartLength>912.3</PartLength>
+    </PartDetails>
+    <Completion>
+        <Date>15. August 2024</Date>
+        <Time>11:30</Time>
+    </Completion>
+    <ProcessDetails>
+        <ProcessDuration>37</ProcessDuration>
+        <MaterialUsage>
+            <Process>12.5</Process>
+            <Process>22.7</Process>
+            <Process>29.1</Process>
+        </MaterialUsage>
+    </ProcessDetails>
+    <Operator>Jane Smith</Operator>
+    <Errors>
+        <Critical>
+            <Error>
+            <Code>E101</Code>
+            <Message>Material thickness exceeded limit</Message>
+            <Timestamp>2024-10-14 08:30</Timestamp>
+        </Error>
+<Error>
+            <Code>E202</Code>
+            <Message>Tool wear detected</Message>
+            <Timestamp>2024-10-14 08:40</Timestamp>
+        </Error>
+<Error>
+            <Code>E303</Code>
+            <Message>Temperature too high</Message>
+            <Timestamp>2024-10-14 08:50</Timestamp>
+        </Error>
+        </Critical>
+    </Errors>
+</CombinedMachineData>

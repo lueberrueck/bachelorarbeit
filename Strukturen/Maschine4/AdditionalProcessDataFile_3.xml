@@ -1,0 +1,40 @@
+<ProcessData machineId="BAZ_8906">
+    <Lot>klm-RTL9868-980851</Lot>
+    <ns:BarID>3828-2356</ns:BarID>
+    <MaterialProfile>Profile-2875</MaterialProfile>
+    <PartNumber>20</PartNumber>
+    <ItemName>klm-RTL6334</ItemName>
+    <Location>klm-8581,45, oben</Location>
+    <LengthOfPart>1139.0</LengthOfPart>
+    <Identification>20801</Identification>
+    <FinishDate>2025-08-16 13:03</FinishDate>
+    <ProcessingTime>
+        <CycleTime>
+            <Setup>9</Setup>
+            <Machining>13</Machining>
+            <Cleanup>10</Cleanup>
+        </CycleTime>
+        <Total>14</Total>
+    </ProcessingTime>
+    <Errors></Errors>
+    <Operator>Chris White</Operator>
+    <StepTimes>
+        <Step>13</Step>
+        <Step>18</Step>
+        <Step>17</Step>
+    </StepTimes>
+    <ErrorCounts>
+        <MinorErrors>0</MinorErrors>
+        <MajorErrors>2</MajorErrors>
+        <CriticalErrors>0</CriticalErrors>
+    </ErrorCounts>
+    <MaterialUsage>
+        <Process>12.0</Process>
+        <Process>18.8</Process>
+        <Process>17.8</Process>
+    </MaterialUsage>
+    <CycleTimes>
+        <Start>2024-12-04 17:03</Start>
+        <End>2024-12-04 19:03</End>
+    </CycleTimes>
+</ProcessData>

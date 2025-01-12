@@ -1,0 +1,44 @@
+<ProcessData machineId="BAZ_6800">
+    <Lot>klm-BTL7212-623645</Lot>
+    <ns:BarID>1359-7691</ns:BarID>
+    <MaterialProfile>Profile-2748</MaterialProfile>
+    <PartNumber>6</PartNumber>
+    <ItemName>klm-BTL7460</ItemName>
+    <Location>klm-8776,21, links</Location>
+    <LengthOfPart>1237.5</LengthOfPart>
+    <Identification>53777</Identification>
+    <FinishDate>2025-12-03 12:53</FinishDate>
+    <ProcessingTime>
+        <CycleTime>
+            <Setup>4</Setup>
+            <Machining>13</Machining>
+            <Cleanup>5</Cleanup>
+        </CycleTime>
+        <Total>15</Total>
+    </ProcessingTime>
+    <Errors><Error>
+            <Code>E101</Code>
+            <Message>Material thickness exceeded limit</Message>
+            <Timestamp>2024-10-14 08:30</Timestamp>
+        </Error></Errors>
+    <Operator>Alex Brown</Operator>
+    <StepTimes>
+        <Step>19</Step>
+        <Step>17</Step>
+        <Step>27</Step>
+    </StepTimes>
+    <ErrorCounts>
+        <MinorErrors>1</MinorErrors>
+        <MajorErrors>1</MajorErrors>
+        <CriticalErrors>1</CriticalErrors>
+    </ErrorCounts>
+    <MaterialUsage>
+        <Process>11.9</Process>
+        <Process>15.9</Process>
+        <Process>8.2</Process>
+    </MaterialUsage>
+    <CycleTimes>
+        <Start>2024-12-04 13:53</Start>
+        <End>2024-12-04 13:57</End>
+    </CycleTimes>
+</ProcessData>

@@ -1,0 +1,44 @@
+{
+  "eventType": "MaschinenUpdate",
+  "hubName": "ZentralerDatenHub",
+  "deviceId": MachineCode ? $string(MachineCode) : "BAZ_2263",
+  "data": {
+    "batchLabel": BatchLabel ? $string(BatchLabel) : null,
+    "sequenceID": SequenceID ? $string(SequenceID) : null,
+    "profileType": ProfileType ? $string(ProfileType) : null,
+    "partIndex": PartIndex ? $number(PartIndex) : null,
+    "partDescription": PartDescription ? $string(PartDescription) : null,
+    "componentPosition": ComponentPosition ? $string(ComponentPosition) : null,
+    "partLength": PartLength ? $number(PartLength) : null,
+    "uniqueIdentifier": UniqueIdentifier ? $string(UniqueIdentifier) : null,
+    "completionDate": CompletionDate ? (
+      $fromMillis(
+        $toMillis(CompletionDate, "[D]. [MNn] [Y0001] [H01]:[m01]"),
+        "[Y0001]-[M01]-[D01]T[H01]:[m01]:00Z"
+      )
+    ) : null,
+    "processDuration": ProcessDuration ? $number(ProcessDuration) : null,
+    "errors": Errors ? (
+      $map(Errors.Error, function($error) {
+        {
+          "code": $error.Code ? $string($error.Code) : null,
+          "message": $error.Message ? $string($error.Message) : null,
+          "timestamp": $error.Timestamp ? (
+            $fromMillis(
+              $toMillis($error.Timestamp, "[D]. [MNn] [Y0001] [H01]:[m01]"),
+              "[Y0001]-[M01]-[D01]T[H01]:[m01]:00Z"
+            )
+          ) : null
+        }
+      })
+    ) : [],
+    "status": Errors ? (
+      $count(Errors.Error) > 0 ? "error" : "om"
+    ) : "on",
+    "averageStepTime": null,
+    "totalErrors": Errors ? $count(Errors.Error) : 0,
+    "totalMaterialUsage": MaterialUsage ? $reduce(MaterialUsage.Process, function($sum, $value) { $sum + $number($value) }, 0) : null,
+    "actualCycleDuration": ProcessDuration ? $number(ProcessDuration) : null
+  }
+}
+Struktur 2 korrekt so!

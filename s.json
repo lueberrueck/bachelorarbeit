@@ -1,0 +1,30 @@
+{
+  "ProcessData": {
+    "attr": { "machineId": "BAZ_9900" },
+    "Lot": "klm-BTL1120-112456",
+    "test": null,
+    "tests": null,
+    "BarID": { "text": "4371-2040", "attr": { "test": "test" } },
+    "MaterialProfile": "Profile-3456",
+    "PartNumber": "2",
+    "ItemName": "klm-BTL1120",
+    "Location": "klm-1111,10, oben",
+    "LengthOfPart": "985.3",
+    "Identification": "11245",
+    "FinishDate": "2024-10-14T08:45:33",
+    "ProcessingTime": { "CycleTime": { "Setup": "5", "Machining": "12", "Cleanup": "5" }, "Total": "22" },
+    "Errors": {
+      "Error": [
+        { "Code": "E101", "Message": "Material thickness exceeded limit", "Timestamp": "2024-10-14T08:30:00" },
+        { "Code": "E202", "Message": "Tool wear detected", "Timestamp": "2024-10-14T08:40:00" },
+        { "Code": "E303", "Message": "Temperature too high", "Timestamp": "2024-10-14T08:50:00" },
+        { "Code": "E404", "Message": "Low oil pressure", "Timestamp": "2024-10-14T09:00:00" }
+      ]
+    },
+    "Operator": "John Doe",
+    "StepTimes": { "Step": ["10", "15", "20"] },
+    "ErrorCounts": { "MinorErrors": "3", "MajorErrors": "2", "CriticalErrors": "1" },
+    "MaterialUsage": { "Process": ["12.5", "8.3", "15.2"] },
+    "CycleTimes": { "Start": "2024-10-14T08:00:00", "End": "2024-10-14T08:45:00" }
+  }
+}

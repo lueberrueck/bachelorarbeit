@@ -1,0 +1,29 @@
+{
+    "eventType": "MaschinenUpdate",
+    "hubName": "ZentralerDatenHub",
+    "deviceId": "BAZ_6800",
+    "data": {
+      "batchLabel": "klm-BTL7212-623645",
+      "sequenceID": "1359-7691",
+      "profileType": "Profile-2748",
+      "partIndex": 6,
+      "partDescription": "klm-BTL7460",
+      "componentPosition": "klm-8776,21, links",
+      "partLength": 1237.5,
+      "uniqueIdentifier": "53777",
+      "completionDate": "2025-12-03T12:53:00Z",
+      "processDuration": 15,
+      "errors": [
+        {
+          "code": "E101",
+          "message": "Material thickness exceeded limit",
+          "timestamp": "2024-10-14T08:30:00Z"
+        }
+      ],
+      "status": "error",
+      "averageStepTime": 21.0,
+      "totalErrors": 3,
+      "totalMaterialUsage": 36.0,
+      "actualCycleDuration": 4
+    }
+  }

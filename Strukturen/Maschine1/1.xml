@@ -1,0 +1,18 @@
+<MachineFeedback>
+    <MachineCode>BAZ_2263</MachineCode>
+    <BatchLabel>abc-BTX0815-082331</BatchLabel>
+    <SequenceID>4371-2037</SequenceID>
+    <ProfileType>Type-9876</ProfileType>
+    <PartIndex>5</PartIndex>
+    <PartDescription>abc-TX0815</PartDescription>
+    <ComponentPosition>abc-1234,26, oben</ComponentPosition>
+    <PartLength>799.7</PartLength>
+    <UniqueIdentifier>02331</UniqueIdentifier>
+    <CompletionDate>11.10.2024 14:56</CompletionDate>
+    <MaterialUsage>
+        <Process>12.5</Process>
+        <Process>8.3</Process>
+        <Process>15.2</Process>
+    </MaterialUsage>    
+    <ProcessDuration>20</ProcessDuration>
+</MachineFeedback>

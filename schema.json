@@ -1,0 +1,41 @@
+{
+  "type": "object",
+  "properties": {
+    "eventType": { "type": "string", "description": "Typ des Ereignisses, z.B. 'MaschinenUpdate' oder 'Fehlerbericht'" },
+    "hubName": { "type": "string", "description": "Name des zentralen Daten-Hubs, in dem die Daten verarbeitet werden" },
+    "deviceId": { "type": "string", "description": "Eindeutige Identifikationsnummer der Maschine oder des Geräts" },
+    "data": {
+      "type": "object",
+      "properties": {
+        "batchLabel": { "type": "string", "description": "Bezeichnung der Produktionscharge oder -auftrag" },
+        "sequenceID": { "type": "string", "description": "Eindeutige Kennung der Produktionssequenz" },
+        "profileType": { "type": "string", "description": "Profil- oder ID-Typ des verarbeiteten Materials" },
+        "partIndex": { "type": "integer", "description": "Index des Teils innerhalb der Produktionscharge" },
+        "partDescription": { "type": "string", "description": "Beschreibung des verarbeiteten Teils" },
+        "componentPosition": { "type": "string", "description": "Positionsangaben der Komponente" },
+        "partLength": { "type": "number", "description": "Länge des verarbeiteten Teils" },
+        "uniqueIdentifier": { "type": "string", "description": "Einzigartiger Identifikator für das Teil" },
+        "completionDate": { "type": "string", "description": "Datum und Uhrzeit des Prozessabschlusses" },
+        "processDuration": { "type": "number", "description": "Dauer des Prozesses in Minuten" },
+        "errors": {
+          "type": "array",
+          "description": "Liste der aufgetretenen Fehler während des Prozesses",
+          "items": {
+            "type": "object",
+            "properties": {
+              "code": { "type": "string", "description": "Fehlercode" },
+              "message": { "type": "string", "description": "Beschreibung des Fehlers" },
+              "timestamp": { "type": "string", "description": "Zeitpunkt des Fehlers" }
+            }
+          }
+        },
+        "status": { "type": "string", "description": "Bedingter Status, basierend auf Fehlercodes und -meldungen" },
+        "averageStepTime": { "type": "number", "description": "Durchschnittliche Bearbeitungszeit der Teilschritte in Minuten" },
+        "totalErrors": { "type": "integer", "description": "Summierte Anzahl aller Fehlerarten" },
+        "totalMaterialUsage": { "type": "number", "description": "Gesamter Materialverbrauch über alle Prozesse hinweg" },
+        "actualCycleDuration": { "type": "number", "description": "Berechnete Zykluszeit basierend auf Start- und Endzeit in Minuten" }
+      }
+    }
+  },
+  "required": ["eventType", "hubName", "deviceId", "data"]
+}

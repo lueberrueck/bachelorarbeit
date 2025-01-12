@@ -1,0 +1,22 @@
+{
+    "eventType": "MaschinenUpdate",
+    "hubName": "ZentralerDatenHub",
+    "deviceId": "BAZ_1234",
+    "data": {
+      "batchLabel": "xyz-MTG1234-123456",
+      "sequenceID": "3456-6543",
+      "profileType": "Type-1234",
+      "partIndex": 3,
+      "partDescription": "xyz-MTG1234",
+      "componentPosition": "xyz-5678,15, unten",
+      "partLength": 1024.5,
+      "uniqueIdentifier": "04567",
+      "processDuration": 25,
+      "errors": [],
+      "status": "on",
+      "averageStepTime": 25,
+      "totalErrors": 0,
+      "totalMaterialUsage": 23.3,
+      "actualCycleDuration": 25
+    }
+  }

@@ -1,0 +1,24 @@
+{
+    "eventType": "MachineData",
+    "hubName": "CentralDataHub",
+    "deviceId": "BAZ_3838",
+    "data": {
+      "batchLabel": "efg-BTL3665-401319",
+      "sequenceID": "7947-2327",
+      "profileType": "9482",
+      "partIndex": 8,
+      "partDescription": "efg-MNL7207",
+      "componentPosition": "efg-9668,34, unten",
+      "partLength": 951.37,
+      "uniqueIdentifier": "19899",
+      "completionDate": "2025-08-21T12:44:00Z",
+      "processDuration": 30,
+      "errors": [],
+      "status": "on",
+      "averageStepTime": null,
+      "totalErrors": 0,
+      "totalMaterialUsage": null,
+      "actualCycleDuration": 30
+    }
+  }
+  

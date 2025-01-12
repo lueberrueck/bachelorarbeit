@@ -1,0 +1,24 @@
+{
+    "eventType": "MachineData",
+    "hubName": "CentralDataHub",
+    "deviceId": "BAZ_5582",
+    "data": {
+      "batchLabel": "efg-ZXL9555-372042",
+      "sequenceID": "4587-5187",
+      "profileType": "7337",
+      "partIndex": 14,
+      "partDescription": "efg-ZXL4615",
+      "componentPosition": "efg-1931,18, rechts",
+      "partLength": 990.15,
+      "uniqueIdentifier": "52299",
+      "completionDate": "2025-03-28T12:44:00Z",
+      "processDuration": 39,
+      "errors": [],
+        "status": "on",
+        "averageStepTime": null,
+        "totalErrors": 0,
+        "totalMaterialUsage": null,
+        "actualCycleDuration": 39
+    }
+  }
+  

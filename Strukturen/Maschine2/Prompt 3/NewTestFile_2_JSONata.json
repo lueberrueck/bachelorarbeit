@@ -1,0 +1,22 @@
+{
+    "eventType": "MaschinenUpdate",
+    "hubName": "ZentralerDatenHub",
+    "deviceId": "BAZ_7157",
+    "data": {
+      "batchLabel": "xyz-TLX7181-905281",
+      "sequenceID": "8190-6849",
+      "profileType": "ID-5143",
+      "partIndex": 12,
+      "partDescription": "xyz-QRS2942",
+      "componentPosition": "xyz-5238,38, unten",
+      "partLength": 822.4,
+      "uniqueIdentifier": "14382",
+      "processDuration": 26,
+      "errors": [],
+      "status": "on",
+      "averageStepTime": null,
+      "totalErrors": 0,
+      "totalMaterialUsage": null,
+      "actualCycleDuration": 26
+    }
+  }

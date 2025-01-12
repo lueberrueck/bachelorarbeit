@@ -1,0 +1,33 @@
+{
+  "eventType": "MaschinenUpdate",
+  "hubName": "ZentralerDatenHub",
+  "deviceId": MachineID ? $string(MachineID) : "BAZ_2263",
+  "data": {
+    "batchLabel": BatchName ? $string(BatchName) : null,
+    "sequenceID": SequenceNo ? $string(SequenceNo) : null,
+    "profileType": ProfileID ? $string(ProfileID) : null,
+    "partIndex": PartNo ? $number(PartNo) : null,
+    "partDescription": Description ? $string(Description) : null,
+    "componentPosition": PositionDetails ? $string(PositionDetails) : null,
+    "partLength": PartLength ? $number(PartLength) : null,
+    "uniqueIdentifier": UniqueID ? $string(UniqueID) : null,
+    "completionDate": CompletionTime ? (
+      $fromMillis(
+        $toMillis(
+          $replace(CompletionTime, / Uhr$/, ""),
+          "[Y]/[M01]/[D01] [H01]:[m01]"
+        ),
+        "[Y0001]-[M01]-[D01]T[H01]:[m01]:00Z"
+      )
+    ) : null,
+    "processDuration": CycleDuration ? $number(CycleDuration) : null,
+    "errors": [],
+    "status": "on",
+    "averageStepTime": CycleDuration ? $number(CycleDuration) : null,
+    "totalErrors": 0,
+    "totalMaterialUsage": null,
+    "actualCycleDuration": CycleDuration ? $number(CycleDuration) : null
+  }
+}
+Struktur 3
+- Konvertierungen sind alle korrekt, es fehlt aber die Überprüfung der Felder: erros, status, totalErros, totalMaterialUsage

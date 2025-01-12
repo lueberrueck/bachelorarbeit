@@ -1,0 +1,15 @@
+{
+  "name": "bachelorarbeit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "Leon Ueberrück",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "jsonata": "^2.0.5",
+    "xml2js": "^0.6.2"
+  }
+}

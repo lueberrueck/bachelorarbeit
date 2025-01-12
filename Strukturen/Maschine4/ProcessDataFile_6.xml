@@ -1,0 +1,40 @@
+<ProcessData machineId="BAZ_9094">
+    <Lot>klm-ZTL9141-424425</Lot>
+    <ns:BarID>2135-7851</ns:BarID>
+    <MaterialProfile>Profile-9445</MaterialProfile>
+    <PartNumber>14</PartNumber>
+    <ItemName>klm-BTL4625</ItemName>
+    <Location>klm-4030,36, unten</Location>
+    <LengthOfPart>966.6</LengthOfPart>
+    <Identification>50615</Identification>
+    <FinishDate>2025-07-10 12:53</FinishDate>
+    <ProcessingTime>
+        <CycleTime>
+            <Setup>7</Setup>
+            <Machining>13</Machining>
+            <Cleanup>4</Cleanup>
+        </CycleTime>
+        <Total>16</Total>
+    </ProcessingTime>
+    <Errors></Errors>
+    <Operator>John Doe</Operator>
+    <StepTimes>
+        <Step>14</Step>
+        <Step>10</Step>
+        <Step>29</Step>
+    </StepTimes>
+    <ErrorCounts>
+        <MinorErrors>1</MinorErrors>
+        <MajorErrors>0</MajorErrors>
+        <CriticalErrors>1</CriticalErrors>
+    </ErrorCounts>
+    <MaterialUsage>
+        <Process>5.9</Process>
+        <Process>18.6</Process>
+        <Process>6.2</Process>
+    </MaterialUsage>
+    <CycleTimes>
+        <Start>2024-12-04 11:53</Start>
+        <End>2024-12-04 12:53</End>
+    </CycleTimes>
+</ProcessData>

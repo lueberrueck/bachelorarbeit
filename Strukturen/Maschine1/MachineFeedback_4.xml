@@ -1,0 +1,15 @@
+<MachineFeedback>
+    <MachineCode>BAZ_4321</MachineCode>
+    <BatchLabel>jkl-OPQ6789-789012</BatchLabel>
+    <SequenceID>0123-4567</SequenceID>
+    <ProfileType>Type-3456</ProfileType>
+    <PartIndex>6</PartIndex>
+    <PartDescription>jkl-OPQ6789</PartDescription>
+    <PartLength>1123.3</PartLength>
+    <UniqueIdentifier>01234</UniqueIdentifier>
+    <CompletionDate>15.10.2024 14:00</CompletionDate>
+    <MaterialUsage>
+        <Process>13.5</Process>
+    </MaterialUsage>
+    <ProcessDuration>null</ProcessDuration>
+</MachineFeedback>

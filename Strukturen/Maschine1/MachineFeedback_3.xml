@@ -1,0 +1,17 @@
+<MachineFeedback>
+    <MachineCode>BAZ_6543</MachineCode>
+    <BatchLabel>ghi-LMN2345-345678</BatchLabel>
+    <SequenceID>7890-1234</SequenceID>
+    <ProfileType>Type-6789</ProfileType>
+    <PartIndex>2</PartIndex>
+    <PartDescription>ghi-LMN2345</PartDescription>
+    <ComponentPosition>ghi-6789,32, links</ComponentPosition>
+    <PartLength>null</PartLength>
+    <UniqueIdentifier>07890</UniqueIdentifier>
+    <CompletionDate>14.10.2024 11:20</CompletionDate>
+    <MaterialUsage>
+        <Process>11.1</Process>
+        <Process>9.8</Process>
+    </MaterialUsage>
+    <ProcessDuration>22</ProcessDuration>
+</MachineFeedback>

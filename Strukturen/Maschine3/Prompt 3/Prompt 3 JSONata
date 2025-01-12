@@ -1,0 +1,35 @@
+{
+  "eventType": "MaschinenUpdate",
+  "hubName": "ZentralerDatenHub",
+  "deviceId": $exists(MachineID) ? MachineID : "BAZ_2263",
+  "data": {
+    "batchLabel": $exists(BatchName) ? BatchName : null,
+    "sequenceID": $exists(SequenceNo) ? SequenceNo : null,
+    "profileType": $exists(ProfileID) ? ProfileID : null,
+    "partIndex": $exists(PartNo) ? $number(PartNo) : null,
+    "partDescription": $exists(Description) ? Description : null,
+    "componentPosition": $exists(PositionDetails) ? PositionDetails : null,
+    "partLength": $exists(PartLength) ? $number(PartLength) : null,
+    "uniqueIdentifier": $exists(UniqueID) ? UniqueID : null,
+    "completionDate": $exists(CompletionTime) ? $fromMillis(
+      $toMillis(CompletionTime, "[Y0001]/[M01]/[D01] [H01]:[m01] Uhr"),
+      "[Y0001]-[M01]-[D01]T[H01]:[m01]:00Z"
+    ) : null,
+    "processDuration": $exists(CycleDuration) ? $number(CycleDuration) : null,
+    "errors": $exists(Errors) ? $map(Errors.Error, function($error) {
+      {
+        "code": $exists($error.Code) ? $error.Code : null,
+        "message": $exists($error.Message) ? $error.Message : null,
+        "timestamp": $exists($error.Timestamp) ? $fromMillis(
+          $toMillis($error.Timestamp, "[Y0001]/[M01]/[D01] [H01]:[m01] Uhr"),
+          "[Y0001]-[M01]-[D01]T[H01]:[m01]:00Z"
+        ) : null
+      }
+    }) : [],
+    "status": $exists(Status) ? (Status = "yes" ? true : Status = "no" ? false : Status) : "on",
+    "averageStepTime": $exists(AverageStepTime) ? $number(AverageStepTime) : null,
+    "totalErrors": $exists(TotalErrors) ? $number(TotalErrors) : 0,
+    "totalMaterialUsage": $exists(TotalMaterialUsage) ? $number(TotalMaterialUsage) : null,
+    "actualCycleDuration": $exists(CycleDuration) ? $number(CycleDuration) : null
+  }
+}

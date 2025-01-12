@@ -1,0 +1,51 @@
+{
+  "eventType": "MaschinenUpdate",
+  "hubName": "ZentralerDatenHub",
+  "deviceId": $exists(MachineInfo.attr.MachineCode) ? MachineInfo.attr.MachineCode : "BAZ_2263",
+  "data": {
+    "batchLabel": MachineInfo.Batch ? $string(MachineInfo.Batch) : null,
+    "sequenceID": MachineInfo.Sequence ? $string(MachineInfo.Sequence) : null,
+    "profileType": MachineInfo.Profile ? $string(MachineInfo.Profile) : null,
+    "partIndex": PartDetails.PartIndex ? $number(PartDetails.PartIndex) : null,
+    "partDescription": PartDetails.PartDescription ? $string(PartDetails.PartDescription) : null,
+    "componentPosition": PartDetails.Location ? $string(PartDetails.Location) : null,
+    "partLength": PartDetails.PartLength ? $number(PartDetails.PartLength) : null,
+    "uniqueIdentifier": null,
+    "completionDate": (
+      $exists(Completion.Date) and $exists(Completion.Time)
+    ) ? (
+      $fromMillis(
+        $toMillis(Completion.Date & " " & Completion.Time, "[D]. [MNn] [Y0001] [H01]:[m01]"),
+        "[Y0001]-[M01]-[D01]T[H01]:[m01]:00Z"
+      )
+    ) : null,
+    "processDuration": ProcessDetails.ProcessDuration ? $number(ProcessDetails.ProcessDuration) : null,
+    "errors": Errors.Critical.Error ? [(
+      $map(Errors.Critical.Error, function($error) {
+        {
+          "code": $error.Code ? $string($error.Code) : null,
+          "message": $error.Message ? $string($error.Message) : null,
+          "timestamp": $error.Timestamp ? (
+            $fromMillis(
+              $toMillis($error.Timestamp, "[Y0001]-[M01]-[D01] [H01]:[m01]"),
+              "[Y0001]-[M01]-[D01]T[H01]:[m01]:00Z"
+            )
+          ) : null
+        }
+      })
+)] : [],
+    "status": (
+      $exists(Errors.Critical.Error[Code = "E101" or Code = "E303"]) or
+      $exists(Errors.Critical.Error[Message ~> /Temperature too high/])
+    ) ? "error" : (
+      $exists(Errors.Critical.Error[Code = "E202"]) or
+      $exists(Errors.Critical.Error[Message ~> /Tool wear detected/])
+    ) ? "warning" : "on",
+    "averageStepTime": null,
+    "totalErrors": Errors.Critical.Error ? $count(Errors.Critical.Error) : 0,
+    "totalMaterialUsage": ProcessDetails.MaterialUsage.Process ? (
+      $sum($map(ProcessDetails.MaterialUsage.Process, $number))
+    ) : null,
+    "actualCycleDuration": null
+  }
+}

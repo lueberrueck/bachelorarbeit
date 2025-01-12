@@ -1,0 +1,45 @@
+(
+  $defaultDeviceId := "BAZ_62325";
+  $defaultStatus := "on";
+  $errorCodes := Errors.Error[].Code;
+  $errorMessages := Errors.Error[].Message;
+  $containsError := function($codes, $messages, $codeList, $messageList) {
+    $exists($filter($codes, function($code) { $code in $codeList })) or
+    $exists($filter($messages, function($message) { $exists($map($messageList, function($msg) { $contains($message, $msg) })) }))
+  };
+  $status := $defaultStatus;
+  $status := $containsError($errorCodes, $errorMessages, ["E101", "E303"], ["Temperature too high"]) ? "error" : $status;
+  $status := $containsError($errorCodes, $errorMessages, ["E202"], ["Tool wear detected"]) and $status != "error" ? "warning" : $status;
+  $status := $status = $defaultStatus ? "on" : $status;
+  $average := function($arr) { $sum($arr) / $count($arr) };
+  $parseDate := function($dateStr) { $fromMillis($toMillis($dateStr, "yyyy-MM-dd HH:mm"), "[Y0001]-[M01]-[D01]T[H01]:[m01]:00Z") };
+  {
+    "eventType": "MaschinenUpdate",
+    "hubName": "ZentralerDatenHub",
+    "deviceId": machineId ? machineId : $defaultDeviceId,
+    "data": {
+      "batchLabel": Lot ? Lot : null,
+      "sequenceID": BarID ? BarID : null,
+      "profileType": MaterialProfile ? MaterialProfile : null,
+      "partIndex": PartNumber ? $number(PartNumber) : null,
+      "partDescription": ItemName ? ItemName : null,
+      "componentPosition": Location ? Location : null,
+      "partLength": LengthOfPart ? $number(LengthOfPart) : null,
+      "uniqueIdentifier": Identification ? Identification : null,
+      "completionDate": FinishDate ? $parseDate(FinishDate) : null,
+      "processDuration": ProcessingTime.Total ? $number(ProcessingTime.Total) : null,
+      "errors": Errors.Error ? $map(Errors.Error, function($error) {
+        {
+          "code": $error.Code ? $error.Code : null,
+          "message": $error.Message ? $error.Message : null,
+          "timestamp": $error.Timestamp ? $parseDate($error.Timestamp) : null
+        }
+      }) : [],
+      "status": $status,
+      "averageStepTime": StepTimes.Step ? $average($map(StepTimes.Step, $number)) : null,
+      "totalErrors": ErrorCounts ? $sum([$number(ErrorCounts.MinorErrors), $number(ErrorCounts.MajorErrors), $number(ErrorCounts.CriticalErrors)]) : null,
+      "totalMaterialUsage": MaterialUsage.Process ? $sum($map(MaterialUsage.Process, $number)) : null,
+      "actualCycleDuration": CycleTimes ? ($toMillis(CycleTimes.End, "yyyy-MM-dd HH:mm") - $toMillis(CycleTimes.Start, "yyyy-MM-dd HH:mm")) / 60000 : null
+    }
+  }
+)

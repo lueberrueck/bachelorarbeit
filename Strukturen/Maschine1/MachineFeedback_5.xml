@@ -1,0 +1,16 @@
+<MachineFeedback>
+    <MachineCode>BAZ_1111</MachineCode>
+    <BatchLabel>mno-PQR1234-345678</BatchLabel>
+    <SequenceID>6789-0123</SequenceID>
+    <ProfileType>Type-5678</ProfileType>
+    <PartIndex>1</PartIndex>
+    <PartDescription>mno-PQR1234</PartDescription>
+    <ComponentPosition>mno-1234,12, unten</ComponentPosition>
+    <PartLength>785.0</PartLength>
+    <UniqueIdentifier></UniqueIdentifier>
+    <CompletionDate>16.10.2024 12:45</CompletionDate>
+    <MaterialUsage>
+        <Process>7.2</Process>
+    </MaterialUsage>
+    <ProcessDuration>20</ProcessDuration>
+</MachineFeedback>

@@ -1,0 +1,18 @@
+<!-- Ohne Inhalt bei Unique Identifier -->
+<MachineFeedback>
+    <MachineCode>BAZ_5555</MachineCode>
+    <BatchLabel>yzb-BCD1234-567890</BatchLabel>
+    <SequenceID>3456-7890</SequenceID>
+    <ProfileType>Type-6543</ProfileType>
+    <PartIndex>10</PartIndex>
+    <PartDescription>null</PartDescription>
+    <ComponentPosition>yzb-1234,10, unten</ComponentPosition>
+    <PartLength>799.9</PartLength>
+    <UniqueIdentifier></UniqueIdentifier>
+    <CompletionDate>20.10.2024 10:10</CompletionDate>
+    <MaterialUsage>
+        <Process>14.7</Process>
+        <Process>11.3</Process>
+    </MaterialUsage>
+    <ProcessDuration>20</ProcessDuration>
+</MachineFeedback>

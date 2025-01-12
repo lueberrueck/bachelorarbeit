@@ -1,0 +1,23 @@
+{
+    "eventType": "MaschinenUpdate",
+    "hubName": "ZentralerDatenHub",
+    "deviceId": "BAZ_6543",
+    "data": {
+      "batchLabel": "ghi-LMN2345-345678",
+      "sequenceID": "7890-1234",
+      "profileType": "Type-6789",
+      "partIndex": 2,
+      "partDescription": "ghi-LMN2345",
+      "componentPosition": "ghi-6789,32, links",
+      "partLength": null,
+      "uniqueIdentifier": "07890",
+      "completionDate": "2024-10-14T11:20:00.000Z",
+      "processDuration": 22,
+      "errors": [],
+      "status": "on",
+      "averageStepTime": null,
+      "totalErrors": 0,
+      "totalMaterialUsage": 20.9,
+      "actualCycleDuration": 22
+    }
+  }

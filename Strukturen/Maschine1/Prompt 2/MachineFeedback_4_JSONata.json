@@ -1,0 +1,22 @@
+{
+    "eventType": "MaschinenUpdate",
+    "hubName": "ZentralerDatenHub",
+    "deviceId": "BAZ_4321",
+    "data": {
+      "batchLabel": "jkl-OPQ6789-789012",
+      "sequenceID": "0123-4567",
+      "profileType": "Type-3456",
+      "partIndex": 6,
+      "partDescription": "jkl-OPQ6789",
+      "componentPosition": null,
+      "partLength": 1123.3,
+      "uniqueIdentifier": "01234",
+      "processDuration": null,
+      "errors": [],
+      "status": "on",
+      "averageStepTime": null,
+      "totalErrors": 0,
+      "totalMaterialUsage": 13.5,
+      "actualCycleDuration": null
+    }
+  }

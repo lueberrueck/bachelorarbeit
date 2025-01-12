@@ -1,0 +1,38 @@
+{
+  "eventType": "MaschinenUpdate",
+  "hubName": "ZentralerDatenHub",
+  "deviceId": $exists(machineId) ? machineId : "BAZ_62325",
+  "data": {
+    "batchLabel": Lot,
+    "sequenceID": BarID,
+    "profileType": MaterialProfile,
+    "partIndex": $number(PartNumber),
+    "partDescription": ItemName,
+    "componentPosition": Location,
+    "partLength": $number(LengthOfPart),
+    "uniqueIdentifier": Identification,
+    "completionDate": $fromMillis($toMillis(FinishDate, "[Y0001]-[M01]-[D01] [H01]:[m01]"), "[Y0001]-[M01]-[D01]T[H01]:[m01]:[s01]Z"),
+    "processDuration": $number(ProcessingTime.Total),
+    "errors": Errors.Error ? (
+      $map(Errors.Error, function($error) {
+        {
+          "code": $error.Code,
+          "message": $error.Message,
+          "timestamp": $fromMillis($toMillis($error.Timestamp, "[Y0001]-[M01]-[D01] [H01]:[m01]"), "[Y0001]-[M01]-[D01]T[H01]:[m01]:[s01]Z")
+        }
+      })
+    ) : [],
+    "status": (
+      $contains($join(Errors.Error[].Code, ","), "E101") or
+      $contains($join(Errors.Error[].Code, ","), "E303") or
+      $exists($filter(Errors.Error, function($error) { $contains($error.Message, "Temperature too high") }))
+    ) ? "error" : (
+      $contains($join(Errors.Error[].Code, ","), "E202") or
+      $exists($filter(Errors.Error, function($error) { $contains($error.Message, "Tool wear detected") }))
+    ) ? "warning" : "on",
+    "averageStepTime": $average(StepTimes.Step),
+    "totalErrors": $sum([ErrorCounts.MinorErrors, ErrorCounts.MajorErrors, ErrorCounts.CriticalErrors]),
+    "totalMaterialUsage": $sum(MaterialUsage.Process),
+    "actualCycleDuration": ($toMillis(CycleTimes.End, "[Y0001]-[M01]-[D01] [H01]:[m01]") - $toMillis(CycleTimes.Start, "[Y0001]-[M01]-[D01] [H01]:[m01]")) / 60000
+  }
+}

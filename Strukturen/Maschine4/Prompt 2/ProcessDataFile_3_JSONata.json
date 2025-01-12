@@ -1,0 +1,21 @@
+{
+  "eventType": "MaschinenUpdate",
+  "hubName": "ZentralerDatenHub",
+  "deviceId": "BAZ_6964",
+  "data": {
+    "batchLabel": "klm-ZTL7921-823565",
+    "sequenceID": "3932-2692",
+    "profileType": "Profile-3019",
+    "partIndex": 13,
+    "partDescription": "klm-BTL6382",
+    "componentPosition": "klm-7051,39, rechts",
+    "partLength": 584.1,
+    "uniqueIdentifier": "85040",
+    "processDuration": 26,
+    "errors": [],
+    "status": "on",
+    "averageStepTime": 12,
+    "totalErrors": 5,
+    "totalMaterialUsage": 44.7
+  }
+}

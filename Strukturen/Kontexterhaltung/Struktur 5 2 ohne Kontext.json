@@ -1,0 +1,26 @@
+{
+    "eventType": "MaschinenUpdate",
+    "hubName": "ZentralerDatenHub",
+    "deviceId": "BAZ_62325",
+    "data": {
+      "batchLabel": "xyz-GKL1122-654789",
+      "sequenceID": "1234-5678",
+      "profileType": "Type-1122",
+      "partIndex": 4,
+      "partDescription": "ghi-YTR1234",
+      "componentPosition": "ghi-9123,15, unten",
+      "partLength": 981.4,
+      "uniqueIdentifier": null,
+      "processDuration": 45,
+      "errors": {
+        "code": "E202",
+        "message": "Tool wear detected",
+        "timestamp": "2024-10-14T08:40:00Z"
+      },
+      "status": "warning",
+      "averageStepTime": null,
+      "totalErrors": 0,
+      "totalMaterialUsage": 58.699999999999996,
+      "actualCycleDuration": null
+    }
+  }

@@ -1,0 +1,29 @@
+{
+  "eventType": "MaschinenUpdate",
+  "hubName": "ZentralerDatenHub",
+  "deviceId": "BAZ_62325",
+  "data": {
+    "batchLabel": "klm-ZTL9278-661825",
+    "sequenceID": "7587-7923",
+    "profileType": "Profile-7353",
+    "partIndex": 5,
+    "partDescription": "klm-BTL9905",
+    "componentPosition": "klm-2418,32, links",
+    "partLength": 791.6,
+    "uniqueIdentifier": "48155",
+    "completionDate": "2025-01-22T12:53:00Z",
+    "processDuration": 29,
+    "errors": [
+      {
+        "Code": "E202",
+        "Message": "Tool wear detected",
+        "Timestamp": "2024-10-14 08:40"
+      }
+    ],
+    "status": "warning",
+    "averageStepTime": 16.333333333333332,
+    "totalErrors": 4,
+    "totalMaterialUsage": 35.599999999999994,
+    "actualCycleDuration": 60
+  }
+}

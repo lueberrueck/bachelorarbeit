@@ -1,0 +1,33 @@
+{
+  "eventType": "MaschinenUpdate",
+  "hubName": "ZentralerDatenHub",
+  "deviceId": MachineCode ? MachineCode : "BAZ_2263",
+  "data": {
+    "batchLabel": BatchLabel ? BatchLabel : null,
+    "sequenceID": SequenceID ? SequenceID : null,
+    "profileType": ProfileType ? ProfileType : null,
+    "partIndex": PartIndex ? $number(PartIndex) : null,
+    "partDescription": PartDescription ? PartDescription : null,
+    "componentPosition": ComponentPosition ? ComponentPosition : null,
+    "partLength": PartLength ? $number(PartLength) : null,
+    "uniqueIdentifier": UniqueIdentifier ? UniqueIdentifier : null,
+    "completionDate": CompletionDate ? $fromMillis($toMillis(CompletionDate, "DD.MM.YYYY HH:mm"), "[Y0001]-[M01]-[D01]T[H01]:[m01]:00Z") : null,
+    "processDuration": ProcessDuration ? $number(ProcessDuration) : null,
+    "errors": Errors ? (
+      $map(Errors.Error, function($error) {
+        {
+          "code": $error.Code ? $error.Code : null,
+          "message": $error.Message ? $error.Message : null,
+          "timestamp": $error.Timestamp ? $fromMillis($toMillis($error.Timestamp, "DD.MM.YYYY HH:mm"), "[Y0001]-[M01]-[D01]T[H01]:[m01]:00Z") : null
+        }
+      })
+    ) : [],
+    "status": Errors ? (
+      $count(Errors.Error) > 0 ? "error" : "on"
+    ) : "on",
+    "averageStepTime": ProcessDuration ? $number(ProcessDuration) / ($count(Errors.Error) > 0 ? $count(Errors.Error) : 1) : null,
+    "totalErrors": Errors ? $count(Errors.Error) : 0,
+    "totalMaterialUsage": MaterialUsage ? $sum($map(MaterialUsage.Process, $number)) : null,
+    "actualCycleDuration": ProcessDuration ? $number(ProcessDuration) : null
+  }
+}

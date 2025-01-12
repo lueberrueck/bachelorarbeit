@@ -1,0 +1,37 @@
+{
+  "eventType": "MaschinenUpdate",
+  "hubName": "ZentralerDatenHub",
+  "deviceId": $string($.machineId ? $.machineId : "BAZ_62325"),
+  "data": {
+    "batchLabel": $.Lot ? $.Lot : null,
+    "sequenceID": $.BarID ? $.BarID : null,
+    "profileType": $.MaterialProfile ? $.MaterialProfile : null,
+    "partIndex": $.PartNumber ? $number($.PartNumber) : null,
+    "partDescription": $.ItemName ? $.ItemName : null,
+    "componentPosition": $.Location ? $.Location : null,
+    "partLength": $.LengthOfPart ? $number($.LengthOfPart) : null,
+    "uniqueIdentifier": $.Identification ? $.Identification : null,
+    "completionDate": $.FinishDate ? $fromMillis($toMillis($.FinishDate, '[Y0001]-[M01]-[D01] [H01]:[m01]'), '[Y0001]-[M01]-[D01]T[H01]:[m01]:00Z') : null,
+    "processDuration": $.ProcessingTime.Total ? $number($.ProcessingTime.Total) : null,
+    "errors": $.Errors.Error ? ($type($.Errors.Error) = "array" ? $.Errors.Error : [$.Errors.Error]) : [],
+    "status": (
+      $contains($join($.Errors.Error[].Code, ','), 'E101') or
+      $contains($join($.Errors.Error[].Code, ','), 'E303') or
+      $contains($join($.Errors.Error[].Message, ','), 'Temperature too high')
+    ) ? "error" : (
+      $contains($join($.Errors.Error[].Code, ','), 'E202') or
+      $contains($join($.Errors.Error[].Message, ','), 'Tool wear detected')
+    ) ? "warning" : "on",
+    "averageStepTime": $.StepTimes.Step ? $average($.StepTimes.Step ~> $map($number)) : null,
+    "totalErrors": (
+      ($.ErrorCounts.MinorErrors ? $number($.ErrorCounts.MinorErrors) : 0) +
+      ($.ErrorCounts.MajorErrors ? $number($.ErrorCounts.MajorErrors) : 0) +
+      ($.ErrorCounts.CriticalErrors ? $number($.ErrorCounts.CriticalErrors) : 0)
+    ),
+    "totalMaterialUsage": $.MaterialUsage.Process ? $sum($.MaterialUsage.Process ~> $map($number)) : null,
+    "actualCycleDuration": (
+      $.CycleTimes.Start and $.CycleTimes.End ?
+      ($toMillis($.CycleTimes.End, '[Y0001]-[M01]-[D01] [H01]:[m01]') - $toMillis($.CycleTimes.Start, '[Y0001]-[M01]-[D01] [H01]:[m01]')) / 60000 : null
+    )
+  }
+}

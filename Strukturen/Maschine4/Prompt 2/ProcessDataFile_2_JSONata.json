@@ -1,0 +1,34 @@
+{
+  "eventType": "MaschinenUpdate",
+  "hubName": "ZentralerDatenHub",
+  "deviceId": "BAZ_4381",
+  "data": {
+    "batchLabel": "klm-MTL6103-251667",
+    "sequenceID": "4561-6291",
+    "profileType": "Profile-2395",
+    "partIndex": 11,
+    "partDescription": "klm-RTL8564",
+    "componentPosition": "klm-5963,28, links",
+    "partLength": 1101.7,
+    "uniqueIdentifier": "95938",
+    "processDuration": 23,
+    "errors": [
+      {
+        "code": "E101",
+        "message": "Material thickness exceeded limit"
+      },
+      {
+        "code": "E202",
+        "message": "Tool wear detected"
+      },
+      {
+        "code": "E303",
+        "message": "Temperature too high"
+      }
+    ],
+    "status": "error",
+    "averageStepTime": 21,
+    "totalErrors": 5,
+    "totalMaterialUsage": 50.60000000000001
+  }
+}

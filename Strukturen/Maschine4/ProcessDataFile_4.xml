@@ -1,0 +1,45 @@
+<ProcessData machineId="BAZ_7444">
+    <Lot>klm-ZTL3350-230929</Lot>
+    <ns:BarID>1538-1969</ns:BarID>
+    <MaterialProfile>Profile-2118</MaterialProfile>
+    <PartNumber>5</PartNumber>
+    <ItemName>klm-MTL9973</ItemName>
+    <Location>klm-5314,34, oben</Location>
+    <LengthOfPart>1089.0</LengthOfPart>
+    <Identification>39474</Identification>
+    <FinishDate>2025-07-05 12:53</FinishDate>
+    <ProcessingTime>
+        <CycleTime>
+            <Setup>6</Setup>
+            <Machining>14</Machining>
+            <Cleanup>5</Cleanup>
+        </CycleTime>
+        <Total>17</Total>
+    </ProcessingTime>
+    <Errors>
+<Error>
+            <Code>E303</Code>
+            <Message>Temperature too high</Message>
+            <Timestamp>2024-10-14 08:50</Timestamp>
+        </Error></Errors>
+    <Operator>Alex Brown</Operator>
+    <StepTimes>
+        <Step>14</Step>
+        <Step>14</Step>
+        <Step>27</Step>
+    </StepTimes>
+    <ErrorCounts>
+        <MinorErrors>1</MinorErrors>
+        <MajorErrors>3</MajorErrors>
+        <CriticalErrors>2</CriticalErrors>
+    </ErrorCounts>
+    <MaterialUsage>
+        <Process>7.2</Process>
+        <Process>12.6</Process>
+        <Process>7.3</Process>
+    </MaterialUsage>
+    <CycleTimes>
+        <Start>2024-12-04 15:53</Start>
+        <End>2024-12-04 17:53</End>
+    </CycleTimes>
+</ProcessData>

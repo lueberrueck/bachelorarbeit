@@ -1,0 +1,54 @@
+<ProcessData machineId="BAZ_3362">
+    <Lot>klm-BTL3786-910604</Lot>
+    <ns:BarID>7876-1826</ns:BarID>
+    <MaterialProfile>Profile-4019</MaterialProfile>
+    <PartNumber>5</PartNumber>
+    <ItemName>klm-RTL5716</ItemName>
+    <Location>klm-6289,21, rechts</Location>
+    <LengthOfPart>643.0</LengthOfPart>
+    <Identification>21518</Identification>
+    <FinishDate>2025-10-25 12:53</FinishDate>
+    <ProcessingTime>
+        <CycleTime>
+            <Setup>4</Setup>
+            <Machining>17</Machining>
+            <Cleanup>6</Cleanup>
+        </CycleTime>
+        <Total>28</Total>
+    </ProcessingTime>
+    <Errors><Error>
+            <Code>E101</Code>
+            <Message>Material thickness exceeded limit</Message>
+            <Timestamp>2024-10-14 08:30</Timestamp>
+        </Error>
+<Error>
+            <Code>E202</Code>
+            <Message>Tool wear detected</Message>
+            <Timestamp>2024-10-14 08:40</Timestamp>
+        </Error>
+<Error>
+            <Code>E303</Code>
+            <Message>Temperature too high</Message>
+            <Timestamp>2024-10-14 08:50</Timestamp>
+        </Error></Errors>
+    <Operator>Chris White</Operator>
+    <StepTimes>
+        <Step>8</Step>
+        <Step>22</Step>
+        <Step>16</Step>
+    </StepTimes>
+    <ErrorCounts>
+        <MinorErrors>2</MinorErrors>
+        <MajorErrors>0</MajorErrors>
+        <CriticalErrors>0</CriticalErrors>
+    </ErrorCounts>
+    <MaterialUsage>
+        <Process>10.9</Process>
+        <Process>14.5</Process>
+        <Process>7.0</Process>
+    </MaterialUsage>
+    <CycleTimes>
+        <Start>2024-12-04 11:53</Start>
+        <End>2024-12-04 12:53</End>
+    </CycleTimes>
+</ProcessData>

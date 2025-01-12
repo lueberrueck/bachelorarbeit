@@ -1,0 +1,17 @@
+<!-- Ohne MachineCode Inhalt -->
+<MachineFeedback>
+    <MachineCode></MachineCode>
+    <BatchLabel>vwx-YZA6789-789012</BatchLabel>
+    <SequenceID>6789-3456</SequenceID>
+    <ProfileType>Type-3456</ProfileType>
+    <PartIndex>9</PartIndex>
+    <PartDescription>vwx-YZA6789</PartDescription>
+    <ComponentPosition>vwx-2345,19, oben</ComponentPosition>
+    <PartLength>937.7</PartLength>
+    <UniqueIdentifier>05678</UniqueIdentifier>
+    <CompletionDate>19.10.2024 13:25</CompletionDate>
+    <MaterialUsage>
+        <Process>12.5</Process>
+    </MaterialUsage>
+    <ProcessDuration>21</ProcessDuration>
+</MachineFeedback>
